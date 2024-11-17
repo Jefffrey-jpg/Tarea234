@@ -35,7 +35,7 @@ public class Yape {
 
         JLabel qrCode = new JLabel();
         try {
-            Image qrImage = ImageIO.read(new File("ui\\img\\qr.png")); // Asegúrate de colocar la ruta correcta
+            Image qrImage = ImageIO.read(new File("ui\\img\\qr.png"));
             ImageIcon icon = new ImageIcon(qrImage.getScaledInstance(200, 200, Image.SCALE_SMOOTH));
             qrCode.setIcon(icon);
         } catch (IOException e) {
