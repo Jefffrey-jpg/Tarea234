@@ -89,12 +89,12 @@ public class Calculadora extends JFrame {
             double value = Double.parseDouble(display.getText());
             display.setText(String.valueOf(value / 100));
         } else if ("=".equals(comando)) {
-            calculate(Double.parseDouble(display.getText()));
+            calcular(Double.parseDouble(display.getText()));
             operadorActual = "";
             nuevoNumero = true;
         } else {
             if (!operadorActual.isEmpty()) {
-                calculate(Double.parseDouble(display.getText()));
+                calcular(Double.parseDouble(display.getText()));
             } else {
                 numeroActual = Double.parseDouble(display.getText());
             }
@@ -103,7 +103,7 @@ public class Calculadora extends JFrame {
         }
     }
 
-    private void calculate(double segundoNumero) {
+    private void calcular(double segundoNumero) {
         switch (operadorActual) {
             case "+":
                 numeroActual += segundoNumero;
