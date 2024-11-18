@@ -11,7 +11,7 @@ public class AceHomeCenter {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Ace Home Center");
-        frame.setSize(800, 450);
+        frame.setSize(700, 450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.setResizable(false);
@@ -19,52 +19,45 @@ public class AceHomeCenter {
 
         JPanel upperPanel = new JPanel();
         upperPanel.setBackground(new Color(156, 24, 24));
-        upperPanel.setPreferredSize(new Dimension(800, 50));
+        upperPanel.setPreferredSize(new Dimension(700, 50));
         upperPanel.setLayout(new BorderLayout());
         frame.add(upperPanel, BorderLayout.NORTH);
 
-
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setBackground(new Color(156, 24, 24)); // Color rojo
-        bottomPanel.setPreferredSize(new Dimension(800, 50));
-        bottomPanel.setLayout(new BorderLayout()); // Usar BorderLayout para alinear los elementos
+        bottomPanel.setBackground(new Color(156, 24, 24));
+        bottomPanel.setPreferredSize(new Dimension(700, 50));
+        bottomPanel.setLayout(new BorderLayout());
         frame.add(bottomPanel, BorderLayout.SOUTH);
 
-        // Crear un JPanel para la hora y fecha
         JPanel timePanel = new JPanel();
-        timePanel.setOpaque(false); // Hacerlo transparente para no cubrir el fondo rojo
-        timePanel.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10)); // Alineación hacia la izquierda
+        timePanel.setOpaque(false);
+        timePanel.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
 
-        // Crear un JLabel para la hora
         JLabel timeLabel = new JLabel();
         timeLabel.setFont(new Font("Arial", Font.PLAIN, 14));
         timePanel.add(timeLabel);
 
-        // Crear un JLabel para la fecha
         JLabel dateLabel = new JLabel();
         dateLabel.setFont(new Font("Arial", Font.PLAIN, 14));
         timePanel.add(dateLabel);
 
-        // Crear un JLabel para el texto "Registrar001"
         JLabel registrarLabel = new JLabel("Registrar001");
         registrarLabel.setFont(new Font("Arial", Font.BOLD, 20));
-        registrarLabel.setForeground(Color.WHITE); // Asegurarse de que el texto sea visible
+        registrarLabel.setForeground(Color.WHITE);
         timePanel.add(registrarLabel);
 
-        // Agregar el JPanel al bottomPanel
-        bottomPanel.add(timePanel, BorderLayout.WEST); // Alineación hacia la izquierda
+        bottomPanel.add(timePanel, BorderLayout.WEST);
 
-        // Actualizar la hora y fecha cada segundo
         Timer timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss a");
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
                 Date date = new Date();
-                timeLabel.setText(timeFormat.format(date)); // Actualizar la hora
+                timeLabel.setText(timeFormat.format(date));
                 timeLabel.setFont(new Font("Arial", Font.BOLD, 20));
                 timeLabel.setForeground(Color.WHITE);;
-                dateLabel.setText(dateFormat.format(date)); // Actualizar la fecha
+                dateLabel.setText(dateFormat.format(date));
                 dateLabel.setFont(new Font("Arial", Font.BOLD, 20));
                 dateLabel.setForeground(Color.WHITE);;
             }
@@ -111,7 +104,6 @@ public class AceHomeCenter {
         passwordLabel.setBorder(BorderFactory.createEmptyBorder(0, 12, 5, 50));
         passwordField.setBorder(BorderFactory.createEmptyBorder(5, 0, 5, 50));
 
-        // Restringir ID a 6 caracteres
         idField.setDocument(new javax.swing.text.PlainDocument() {
             @Override
             public void insertString(int offs, String str, javax.swing.text.AttributeSet a) throws javax.swing.text.BadLocationException {
@@ -121,7 +113,6 @@ public class AceHomeCenter {
             }
         });
 
-        // Restringir contraseña a 4 caracteres
         passwordField.setDocument(new javax.swing.text.PlainDocument() {
             @Override
             public void insertString(int offs, String str, javax.swing.text.AttributeSet a) throws javax.swing.text.BadLocationException {
@@ -141,7 +132,7 @@ public class AceHomeCenter {
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(new GridLayout(4, 4, 5, 5));
         rightPanel.setBackground(new Color(156, 24, 24));
-        rightPanel.setPreferredSize(new Dimension(400, 400));
+        rightPanel.setPreferredSize(new Dimension(400, 300));
 
         String[] buttonLabels = {
             "1", "2", "3", "Cancelar",
