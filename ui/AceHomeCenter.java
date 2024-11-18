@@ -19,13 +19,13 @@ public class AceHomeCenter {
 
         JPanel upperPanel = new JPanel();
         upperPanel.setBackground(new Color(156, 24, 24));
-        upperPanel.setPreferredSize(new Dimension(700, 50));
+        upperPanel.setPreferredSize(new Dimension(750, 50));
         upperPanel.setLayout(new BorderLayout());
         frame.add(upperPanel, BorderLayout.NORTH);
 
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(new Color(156, 24, 24));
-        bottomPanel.setPreferredSize(new Dimension(700, 50));
+        bottomPanel.setPreferredSize(new Dimension(750, 50));
         bottomPanel.setLayout(new BorderLayout());
         frame.add(bottomPanel, BorderLayout.SOUTH);
 
