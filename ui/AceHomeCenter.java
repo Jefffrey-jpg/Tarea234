@@ -11,7 +11,7 @@ public class AceHomeCenter {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Ace Home Center");
-        frame.setSize(700, 450);
+        frame.setSize(750, 450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.setResizable(false);
